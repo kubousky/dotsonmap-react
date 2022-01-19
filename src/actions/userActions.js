@@ -14,13 +14,13 @@ export const login = (email, password) => async (dispatch) => {
 
         const config = {
             headers: {
-                'Content-type': 'application/json'
+                'Content-Type': 'application/json'
             }
         }
 
         const { data } = await axios.post(
-            '/api/user/login/',
-            {'username': email, 'password': password},
+            'http://localhost:8000/api/user/token/',
+            {'email': email, 'password': password},
             config
         )
         
