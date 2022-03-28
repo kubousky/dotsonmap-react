@@ -37,6 +37,7 @@ function RegisterScreen({ location, history }) {
         }else{
             dispatch(register(name, email, password))
         }
+        setMessage('')
     }
 
   return <FormContainer>
